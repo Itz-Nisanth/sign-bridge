@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignBridge AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-glow glow1"></div>
+  <div class="background-glow glow2"></div>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>SIGNBRIDGE ✨</h1>
+      <p>AI Gesture Recognition & Live Translation</p>
+    </div>
+
+
+    <div class="main-grid">
+
+      <div class="camera-card glass">
+        <div class="card-top">
+          <h2>LIVE CAMERA</h2>
+          <div class="status">
+            <span class="dot"></span>
+            ACTIVE
+          </div>
+        </div>
+
+        <div class="video-wrapper">
+          <video id="video" autoplay playsinline></video>
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+
+
+      <div class="output-card glass">
+
+        <div class="detected-box">
+          <h3>DETECTED GESTURE</h3>
+          <div id="gestureText">Waiting...</div>
+        </div>
+
+        <div class="info-grid">
+
+          <div class="mini-card">
+            <span>✋ HAND</span>
+            <h4 id="handStatus">NOT DETECTED</h4>
+          </div>
+
+          <div class="mini-card">
+            <span>🧠 AI STATUS</span>
+            <h4>ONLINE</h4>
+          </div>
+
+        </div>
+
+
+        <div class="supported-box">
+          <h3>SUPPORTED GESTURES</h3>
+
+          <div class="gesture-list">
+            <div class="gesture-item">👆 STOP</div>
+            <div class="gesture-item">✌️ PEACE</div>
+            <div class="gesture-item">👋 HELLO</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
